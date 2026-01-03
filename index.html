@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is it november?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: blue; /* Warna latar belakang biru */
+            font-family:Pixelify Sans;
+            color: white; /* Warna teks hitam */
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nama kucing kamu?</h1>
+    <input type="text" id="answer" placeholder="Jawab di sini...">
+    <button onclick="goToImage()">Kirim</button>
+
+    <script>
+        function goToImage() {
+            const answer = document.getElementById('answer').value;
+            if (answer) {
+                // Redirect to the image page
+                window.location.href = 'image.html';
+            } else {
+                alert('Jawab disini');
+            }
+        }
+    </script>
+</body>
+</html>
